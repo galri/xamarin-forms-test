@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel;
+
 namespace MyStuff
 {
-	public interface IShoppingListViewModels
+	public interface IShoppingListViewModel : INotifyPropertyChanged
 	{
 	}
 }

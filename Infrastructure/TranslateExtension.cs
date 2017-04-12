@@ -1,10 +1,11 @@
 ﻿using System;
 using Infrastructure;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Practices.Unity;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyStuff
+namespace Infrastructure
 {
 	[ContentProperty("Text")]
 	public class TranslateExtension : IMarkupExtension

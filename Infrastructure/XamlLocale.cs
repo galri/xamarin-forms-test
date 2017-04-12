@@ -1,10 +1,21 @@
 ﻿using System;
 namespace Infrastructure
 {
-	public class XamlLocale
+	/// <summary>
+	/// Helper class for text locale in xaml.
+	/// </summary>
+	public static class XamlLocale 
 	{
-		public XamlLocale()
+		public static ILocale Locale
+		{
+			get;
+			set;
+		}
+
+		static XamlLocale()
 		{
 		}
+
+		public static string test { get; set; } = "Test";
 	}
 }

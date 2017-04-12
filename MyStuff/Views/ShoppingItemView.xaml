@@ -1,5 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyStuff.ShoppingItemView">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:inf="clr-namespace:Infrastructure;assembly=Infrastructure"
+	xmlns:local="clr-namespace:MyStuff"
+	x:Class="MyStuff.ShoppingItemView">
 	<ContentPage.Content>
+		<StackLayout Orientation="Vertical"> 
+			<Entry Placeholder="{inf:Translate SINP}" 
+				HorizontalOptions="Center"
+				Text="{Binding ShoppingItem.Name}" />
+			<Entry Placeholder="{inf:Translate SIAP}" 
+				HorizontalOptions="Center"
+				Text="{Binding ShoppingItem.Amount}" />
+			<Button Text="{inf:Translate SICT}" 
+				Command="{Binding EditCommand}" />
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

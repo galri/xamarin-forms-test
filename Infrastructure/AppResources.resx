@@ -12,4 +12,24 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="ShoppingListItemMissingMessage" xml:space="preserve">
+    	<value>No shopping list item sent, returning to list.</value>
+    	<comment>label for input field</comment>
+	</data>
+	<data name="ShoppingListItemMissingTitle" xml:space="preserve">
+	    <value>System error</value>
+	    <comment>example input for notes field</comment>
+	</data>
+	<data name="ShoppingListItemMissingConfirm" xml:space="preserve">
+	    <value>Ok</value>
+	</data>
+		<data name="ShoppingListItemNamePlaceholder" xml:space="preserve">
+	    <value>Name</value>
+	</data>
+		<data name="ShoppingListItemAmountPlaceholder" xml:space="preserve">
+	    <value>Amount</value>
+	</data>
+		<data name="ShoppingListItemConfirmTitle" xml:space="preserve">
+	    <value>Edit</value>
+	</data>
 </root>

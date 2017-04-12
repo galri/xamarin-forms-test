@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace MyStuff
 {
-	public partial class ShoppingItemView : ContentPage
+	public partial class ShoppingItemView : ContentPage, IShoppingItemView
 	{
 		public ShoppingItemView()
 		{

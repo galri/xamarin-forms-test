@@ -1,7 +1,7 @@
 ﻿using System;
 namespace MyStuff
 {
-	public interface IShoppingItemView
+	public interface IShoppingItemView 
 	{
 	}
 }

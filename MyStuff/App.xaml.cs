@@ -1,29 +1,46 @@
-﻿using Xamarin.Forms;
+﻿using Prism.Mvvm;
+using Prism.Unity;
+using Microsoft.Practices.Unity;
+using Xamarin.Forms;
+using Infrastructure;
+using Microsoft.Practices.ServiceLocation;
+using System;
 
 namespace MyStuff
 {
-	public partial class App : Application
+	public partial class App : PrismApplication
 	{
-		public App()
+		protected override void OnInitialized()
 		{
-			InitializeComponent();
-
-			MainPage = new MyStuffPage();
+			NavigationService.NavigateAsync("SL");
 		}
 
-		protected override void OnStart()
+		protected override void RegisterTypes()
 		{
-			// Handle when your app starts
+			Container.RegisterType<ILocale, RessourceFileLocale>();
+			XamlLocale.Locale = Container.Resolve<ILocale>();
+
+			Container.RegisterType<IShoppingItemsService, ShopingItemservice>();
+			Container.RegisterType<IShoppingListView, ShoppingList>();
+			Container.RegisterType<IShoppingListViewModel, ShoppingListViewModel>();
+
+			Container.RegisterType<IShoppingItemView, ShoppingItemView>();
+			Container.RegisterType<IShoppingItemViewModel, ShoppingItemViewModel>();
+
+			Container.RegisterTypeForNavigation(Container.Resolve<IShoppingListView>().GetType(),"SL");
+			Container.RegisterTypeForNavigation(Container.Resolve<IShoppingItemView>().GetType(),"SI");
 		}
 
-		protected override void OnSleep()
+		protected override void ConfigureContainer()
 		{
-			// Handle when your app sleeps
+			base.ConfigureContainer();
+
+			ServiceLocator.SetLocatorProvider(HandleServiceLocatorProvider);
 		}
 
-		protected override void OnResume()
+		IServiceLocator HandleServiceLocatorProvider()
 		{
-			// Handle when your app resumes
+			return new UnityServiceLocator(Container);
 		}
 	}
 }
