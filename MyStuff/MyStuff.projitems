@@ -40,11 +40,14 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IShoppingItemViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ShoppingItemViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DesignTime\SLDT.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DesignTime\SIDT.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DesignTime\" />
   </ItemGroup>
 </Project>

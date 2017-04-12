@@ -10,6 +10,11 @@ namespace MyStuff
 		{
 		}
 
+		public ShoppingItem GetItem(int key)
+		{
+			return new ShoppingItem() { Key = key,Name = "A name", Amount = "1"};
+		}
+
 		public IEnumerable<ShoppingItem> GetItems()
 		{
 			var gen = new Generator<ShoppingItem>();

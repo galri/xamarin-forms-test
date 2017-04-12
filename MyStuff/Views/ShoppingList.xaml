@@ -3,8 +3,12 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+	xmlns:local="clr-namespace:MyStuff"
 	x:Class="MyStuff.ShoppingList"
-	prism:ViewModelLocator.AutowireViewModel="True">
+	>
+	<ContentPage.BindingContext>
+		<local:SLDT />
+	</ContentPage.BindingContext>
 	<ContentPage.Content>
 		<ListView ItemsSource="{Binding ShoppingItems}" 
 		SelectedItem="{Binding SelectedShoppingItem, Mode=TwoWay}">

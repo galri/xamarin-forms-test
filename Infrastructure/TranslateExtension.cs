@@ -18,7 +18,16 @@ namespace Infrastructure
 
 		public object ProvideValue(IServiceProvider serviceProvider)
 		{
-			var locale = (ILocale)ServiceLocator.Current.GetService(typeof(ILocale));
+			ILocale locale;
+			if (!ServiceLocator.IsLocationProviderSet)
+			{
+				//TODO: most likely design time, need And check
+				locale = new RessourceFileLocale();
+			}
+			else
+			{
+				locale = (ILocale)ServiceLocator.Current.GetService(typeof(ILocale));
+			}
 			switch (Text)
 			{
 				case "SINP":

@@ -3,6 +3,12 @@ namespace MyStuff
 {
 	public class ShoppingItem
 	{
+		public int Key
+		{
+			get;
+			set;
+		}
+
 		public string Name
 		{
 			get;

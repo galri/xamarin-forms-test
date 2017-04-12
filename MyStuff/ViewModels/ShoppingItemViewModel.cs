@@ -59,7 +59,11 @@ namespace MyStuff
 			{
 				pageDialogService.DisplayAlertAsync(locale.SIMissingItemTitle, locale.SIMissingItemMessage, locale.SIMissingItemConfirm);
 				navigationService.GoBackAsync();
+				return;
 			}
+
+			var key = parameters.GetValue<int>("item");
+			ShoppingItem = service.GetItem(key);
 		}
 
 		public void OnNavigatingTo(NavigationParameters parameters)

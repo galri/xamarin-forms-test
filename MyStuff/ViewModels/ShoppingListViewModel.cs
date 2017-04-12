@@ -26,18 +26,22 @@ namespace MyStuff
 			{
 				if(SetProperty(ref selectedShoppingItem, value) && value != null)
 				{
-					navigationService.NavigateAsync("SI");
+					NavigateToItem();
 				}
 			}
 		}
 
-		readonly IShoppingItemsService service;
+		void NavigateToItem()
+		{
+			var param = new NavigationParameters();
+			param.Add("item", SelectedShoppingItem.Key);
+			navigationService.NavigateAsync("SI",param);
+		}
 		readonly INavigationService navigationService;
 
 		public ShoppingListViewModel(IShoppingItemsService service, INavigationService navigationService)
 		{
 			this.navigationService = navigationService;
-			this.service = service;
 			ShoppingItems = new ObservableCollection<ShoppingItem>(service.GetItems());
 		}
 

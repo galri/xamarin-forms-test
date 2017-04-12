@@ -4,6 +4,9 @@
 	xmlns:inf="clr-namespace:Infrastructure;assembly=Infrastructure"
 	xmlns:local="clr-namespace:MyStuff"
 	x:Class="MyStuff.ShoppingItemView">
+	<ContentPage.BindingContext>
+		<local:SIDT />
+	</ContentPage.BindingContext>
 	<ContentPage.Content>
 		<StackLayout Orientation="Vertical"> 
 			<Entry Placeholder="{inf:Translate SINP}" 
