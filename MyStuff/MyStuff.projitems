@@ -42,6 +42,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ShoppingItemViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DesignTime\SLDT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DesignTime\SIDT.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DesignTime\DTBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

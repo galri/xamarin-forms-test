@@ -5,7 +5,7 @@ using PocoGenerator;
 
 namespace MyStuff
 {
-	public class SLDT : IShoppingListViewModel
+	public class SLDT : DTBase, IShoppingListViewModel
 	{
 		public SLDT()
 		{
@@ -29,7 +29,5 @@ namespace MyStuff
 		public ShoppingItem SelectedShoppingItem { get; set; } 
 
 		public ObservableCollection<ShoppingItem> ShoppingItems { get; set; }
-
-		public event PropertyChangedEventHandler PropertyChanged;
 	}
 }

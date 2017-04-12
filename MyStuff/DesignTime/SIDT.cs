@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace MyStuff
 {
-	public class SIDT : IShoppingItemViewModel
+	public class SIDT : DTBase, IShoppingItemViewModel
 	{
 		public SIDT()
 		{
@@ -18,7 +18,5 @@ namespace MyStuff
 		public ICommand EditCommand { get; set; }
 
 		public ShoppingItem ShoppingItem { get; set; }
-
-		public event PropertyChangedEventHandler PropertyChanged;
 	}
 }
