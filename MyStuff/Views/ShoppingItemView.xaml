@@ -3,20 +3,22 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:inf="clr-namespace:Infrastructure;assembly=Infrastructure"
 	xmlns:local="clr-namespace:MyStuff"
+	xmlns:light="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"
 	x:Class="MyStuff.ShoppingItemView">
 	<ContentPage.BindingContext>
 		<local:SIDT />
 	</ContentPage.BindingContext>
 	<ContentPage.Content>
-		<StackLayout Orientation="Vertical"> 
+		<StackLayout Orientation="Vertical" Padding="10,10,10,10"> 
 			<Entry Placeholder="{inf:Translate SINP}" 
-				HorizontalOptions="Center"
+				HorizontalOptions="Fill"
 				Text="{Binding ShoppingItem.Name}" />
 			<Entry Placeholder="{inf:Translate SIAP}" 
-				HorizontalOptions="Center"
+				HorizontalOptions="FillAndExpand"
 				Text="{Binding ShoppingItem.Amount}" />
 			<Button Text="{inf:Translate SICT}" 
-				Command="{Binding EditCommand}" />
+				Command="{Binding EditCommand}"
+			StyleClass="Primary"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
