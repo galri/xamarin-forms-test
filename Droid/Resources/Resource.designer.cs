@@ -28,6 +28,8 @@ namespace MyStuff.Droid
 		{
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::MyStuff.Droid.Resource.Attribute.actionBarSize;
 			global::ModernHttpClient.Resource.String.library_name = global::MyStuff.Droid.Resource.String.library_name;
+			global::XLabs.Platform.Resource.String.ApplicationName = global::MyStuff.Droid.Resource.String.ApplicationName;
+			global::XLabs.Platform.Resource.String.Hello = global::MyStuff.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Animation

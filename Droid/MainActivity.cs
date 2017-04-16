@@ -24,8 +24,10 @@ namespace MyStuff.Droid
 
 			LoadApplication(new App());
 
-var x = typeof(Xamarin.Forms.Themes.LightThemeResources);
-x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
+#pragma warning disable CS0219
+			var x = typeof(Xamarin.Forms.Themes.LightThemeResources);
+			x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
+#pragma warning restore CS0219
 		}
 	}
 }

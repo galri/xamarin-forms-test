@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Infrastructure
 {
 	/// <summary>
@@ -19,6 +19,12 @@ namespace Infrastructure
 		string SIAmountPlaceHolder { get; }
 
 		string SIConfirmTitle { get; }
+
+		string RUnknownErrorTitle { get;  }
+
+		string RUnknonwnMessage { get; }
+
+		string RUnknownErrorConfirm { get; }
 
 		#endregion
 	}

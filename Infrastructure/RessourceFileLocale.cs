@@ -7,6 +7,22 @@ namespace Infrastructure
 		{
 		}
 
+		public string RUnknonwnMessage
+		{
+			get
+			{
+				return AppResources.ReceiptUnknonwnErrorMessage;
+			}
+		}
+
+		public string RUnknownErrorTitle
+		{
+			get
+			{
+				return AppResources.ReceiptUnknonwnErrorTitle;
+			}
+		}
+
 		public string SIAmountPlaceHolder
 		{
 			get
@@ -52,6 +68,14 @@ namespace Infrastructure
 			get
 			{
 				return Infrastructure.AppResources.ShoppingListItemNamePlaceholder;
+			}
+		}
+
+		public string RUnknownErrorConfirm
+		{
+			get
+			{
+				return AppResources.ReceiptUnknonwnErrorConfirm;
 			}
 		}
 	}

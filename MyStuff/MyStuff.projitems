@@ -17,6 +17,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ShoppingItemView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainMdView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ReceiptAnalyseView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -43,6 +49,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)DesignTime\SLDT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DesignTime\SIDT.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DesignTime\DTBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainMdView.xaml.cs">
+      <DependentUpon>MainMdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\IMainMdView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IMainMdViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainMdViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\IReceiptAnalyseView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ReceiptAnalyseView.xaml.cs">
+      <DependentUpon>ReceiptAnalyseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IReceiptAnalyseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ReceiptAnalyseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IReceiptAnalyser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ReceiptAnalyser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

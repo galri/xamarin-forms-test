@@ -20,7 +20,11 @@ namespace MyStuff.iOS
 #endif
 
 			LoadApplication(new App());
-
+#pragma warning disable CS0219
+			//var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
+			var x = typeof(Xamarin.Forms.Themes.LightThemeResources);
+			x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
+#pragma warning restore CS0219
 			return base.FinishedLaunching(app, options);
 		}
 	}

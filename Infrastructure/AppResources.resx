@@ -29,7 +29,16 @@
 		<data name="ShoppingListItemAmountPlaceholder" xml:space="preserve">
 	    <value>Amount</value>
 	</data>
-		<data name="ShoppingListItemConfirmTitle" xml:space="preserve">
+	<data name="ShoppingListItemConfirmTitle" xml:space="preserve">
 	    <value>Edit</value>
+	</data>
+	<data name="ReceiptUnknonwnErrorMessage" xml:space="preserve">
+	    <value>Unknown error occured!</value>
+	</data>
+	<data name="ReceiptUnknonwnErrorTitle" xml:space="preserve">
+	    <value>Error</value>
+	</data>
+	<data name="ReceiptUnknonwnErrorConfirm" xml:space="preserve">
+	    <value>Ok</value>
 	</data>
 </root>

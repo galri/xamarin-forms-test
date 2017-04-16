@@ -82,5 +82,23 @@ namespace Infrastructure {
                 return ResourceManager.GetString("ShoppingListItemConfirmTitle", resourceCulture);
             }
         }
+        
+        public static string ReceiptUnknonwnErrorMessage {
+            get {
+                return ResourceManager.GetString("ReceiptUnknonwnErrorMessage", resourceCulture);
+            }
+        }
+        
+        public static string ReceiptUnknonwnErrorTitle {
+            get {
+                return ResourceManager.GetString("ReceiptUnknonwnErrorTitle", resourceCulture);
+            }
+        }
+        
+        public static string ReceiptUnknonwnErrorConfirm {
+            get {
+                return ResourceManager.GetString("ReceiptUnknonwnErrorConfirm", resourceCulture);
+            }
+        }
     }
 }
