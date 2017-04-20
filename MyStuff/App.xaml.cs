@@ -26,6 +26,8 @@ namespace MyStuff
 			Container.RegisterType<ILocale, RessourceFileLocale>();
 			XamlLocale.Locale = Container.Resolve<ILocale>();
 			Container.RegisterType<IMediaPicker, MediaPicker>();
+			var ra = DependencyService.Get<IReceiptAnalyser>();
+			Container.RegisterInstance<IReceiptAnalyser>(ra);
 
 			Container.RegisterType<IShoppingItemsService, ShopingItemservice>();
 			Container.RegisterType<IShoppingListView, ShoppingList>();

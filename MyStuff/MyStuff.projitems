@@ -62,7 +62,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IReceiptAnalyseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ReceiptAnalyseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IReceiptAnalyser.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ReceiptAnalyser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IEnumerable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
@@ -70,5 +70,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)DesignTime\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\New Folder\" />
   </ItemGroup>
 </Project>
